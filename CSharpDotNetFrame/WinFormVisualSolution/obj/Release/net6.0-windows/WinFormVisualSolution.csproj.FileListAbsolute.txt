@@ -1,0 +1,14 @@
+F:\Code\CSharpDotNetFrame\WinFormVisualSolution\bin\Release\net6.0-windows\WinFormVisualSolution.exe
+F:\Code\CSharpDotNetFrame\WinFormVisualSolution\bin\Release\net6.0-windows\WinFormVisualSolution.deps.json
+F:\Code\CSharpDotNetFrame\WinFormVisualSolution\bin\Release\net6.0-windows\WinFormVisualSolution.runtimeconfig.json
+F:\Code\CSharpDotNetFrame\WinFormVisualSolution\bin\Release\net6.0-windows\WinFormVisualSolution.dll
+F:\Code\CSharpDotNetFrame\WinFormVisualSolution\bin\Release\net6.0-windows\WinFormVisualSolution.pdb
+F:\Code\CSharpDotNetFrame\WinFormVisualSolution\obj\Release\net6.0-windows\WinFormVisualSolution.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code\CSharpDotNetFrame\WinFormVisualSolution\obj\Release\net6.0-windows\WinFormVisualSolution.AssemblyInfoInputs.cache
+F:\Code\CSharpDotNetFrame\WinFormVisualSolution\obj\Release\net6.0-windows\WinFormVisualSolution.AssemblyInfo.cs
+F:\Code\CSharpDotNetFrame\WinFormVisualSolution\obj\Release\net6.0-windows\WinFormVisualSolution.csproj.CoreCompileInputs.cache
+F:\Code\CSharpDotNetFrame\WinFormVisualSolution\obj\Release\net6.0-windows\WinFormVisualSolution.dll
+F:\Code\CSharpDotNetFrame\WinFormVisualSolution\obj\Release\net6.0-windows\refint\WinFormVisualSolution.dll
+F:\Code\CSharpDotNetFrame\WinFormVisualSolution\obj\Release\net6.0-windows\WinFormVisualSolution.pdb
+F:\Code\CSharpDotNetFrame\WinFormVisualSolution\obj\Release\net6.0-windows\WinFormVisualSolution.genruntimeconfig.cache
+F:\Code\CSharpDotNetFrame\WinFormVisualSolution\obj\Release\net6.0-windows\ref\WinFormVisualSolution.dll
