@@ -38,6 +38,9 @@
             tsbOpenFolder = new ToolStripButton();
             tsbSave = new ToolStripButton();
             tsbSaveAll = new ToolStripButton();
+            toolStripSeparator2 = new ToolStripSeparator();
+            tssbUndo = new ToolStripSplitButton();
+            tssbRedo = new ToolStripSplitButton();
             menuStrip1 = new MenuStrip();
             tsmiFileMenuBar = new ToolStripMenuItem();
             tsmiFileNewMenuBar = new ToolStripMenuItem();
@@ -53,11 +56,26 @@
             tsmiHelpMenuBar = new ToolStripMenuItem();
             tscbSearchMenuBar = new ToolStripComboBox();
             toolStripTextBox1 = new ToolStripTextBox();
+            toolStripSeparator3 = new ToolStripSeparator();
+            toolStripComboBox1 = new ToolStripComboBox();
+            tsbFindInFiles = new ToolStripButton();
+            splitContainer1 = new SplitContainer();
+            splitContainer2 = new SplitContainer();
+            splitContainer3 = new SplitContainer();
             ((System.ComponentModel.ISupportInitialize)formSplitContainer).BeginInit();
             formSplitContainer.Panel1.SuspendLayout();
+            formSplitContainer.Panel2.SuspendLayout();
             formSplitContainer.SuspendLayout();
             toolStrip1.SuspendLayout();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer2).BeginInit();
+            splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer3).BeginInit();
+            splitContainer3.SuspendLayout();
             SuspendLayout();
             // 
             // formSplitContainer
@@ -72,19 +90,24 @@
             // 
             formSplitContainer.Panel1.Controls.Add(toolStrip1);
             formSplitContainer.Panel1.Controls.Add(menuStrip1);
+            // 
+            // formSplitContainer.Panel2
+            // 
+            formSplitContainer.Panel2.Controls.Add(splitContainer1);
             formSplitContainer.Size = new Size(1618, 1037);
-            formSplitContainer.SplitterDistance = 119;
+            formSplitContainer.SplitterDistance = 100;
             formSplitContainer.SplitterWidth = 5;
             formSplitContainer.TabIndex = 0;
             // 
             // toolStrip1
             // 
+            toolStrip1.Dock = DockStyle.Fill;
             toolStrip1.ImageScalingSize = new Size(24, 24);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { tssbBackwards, tssbForwards, toolStripSeparator1, tssbNewFile, tsbOpenFolder, tsbSave, tsbSaveAll });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { tssbBackwards, tssbForwards, toolStripSeparator1, tssbNewFile, tsbOpenFolder, tsbSave, tsbSaveAll, toolStripSeparator2, tssbUndo, tssbRedo, toolStripSeparator3, toolStripComboBox1, tsbFindInFiles });
             toolStrip1.Location = new Point(0, 46);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Padding = new Padding(0, 0, 3, 0);
-            toolStrip1.Size = new Size(1618, 38);
+            toolStrip1.Size = new Size(1618, 54);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -94,7 +117,7 @@
             tssbBackwards.Image = Properties.Resources.Backwards;
             tssbBackwards.ImageTransparentColor = Color.Magenta;
             tssbBackwards.Name = "tssbBackwards";
-            tssbBackwards.Size = new Size(51, 32);
+            tssbBackwards.Size = new Size(51, 48);
             tssbBackwards.Text = "Navigate Backward";
             // 
             // tssbForwards
@@ -103,13 +126,13 @@
             tssbForwards.Image = Properties.Resources.Forwards;
             tssbForwards.ImageTransparentColor = Color.Magenta;
             tssbForwards.Name = "tssbForwards";
-            tssbForwards.Size = new Size(51, 32);
+            tssbForwards.Size = new Size(51, 48);
             tssbForwards.Text = "Navigate Forwards";
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 38);
+            toolStripSeparator1.Size = new Size(6, 54);
             // 
             // tssbNewFile
             // 
@@ -117,7 +140,7 @@
             tssbNewFile.Image = Properties.Resources.NewDocument;
             tssbNewFile.ImageTransparentColor = Color.Magenta;
             tssbNewFile.Name = "tssbNewFile";
-            tssbNewFile.Size = new Size(51, 32);
+            tssbNewFile.Size = new Size(51, 48);
             tssbNewFile.Text = "New File";
             // 
             // tsbOpenFolder
@@ -126,7 +149,7 @@
             tsbOpenFolder.Image = Properties.Resources.OpenFolder;
             tsbOpenFolder.ImageTransparentColor = Color.Magenta;
             tsbOpenFolder.Name = "tsbOpenFolder";
-            tsbOpenFolder.Size = new Size(46, 32);
+            tsbOpenFolder.Size = new Size(46, 48);
             tsbOpenFolder.Text = "Open Folder";
             // 
             // tsbSave
@@ -135,7 +158,7 @@
             tsbSave.Image = Properties.Resources.Save;
             tsbSave.ImageTransparentColor = Color.Magenta;
             tsbSave.Name = "tsbSave";
-            tsbSave.Size = new Size(46, 32);
+            tsbSave.Size = new Size(46, 48);
             tsbSave.Text = "Save";
             // 
             // tsbSaveAll
@@ -144,8 +167,31 @@
             tsbSaveAll.Image = Properties.Resources.SaveAll;
             tsbSaveAll.ImageTransparentColor = Color.Magenta;
             tsbSaveAll.Name = "tsbSaveAll";
-            tsbSaveAll.Size = new Size(46, 32);
+            tsbSaveAll.Size = new Size(46, 48);
             tsbSaveAll.Text = "Save All";
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 54);
+            // 
+            // tssbUndo
+            // 
+            tssbUndo.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tssbUndo.Image = Properties.Resources.Undo;
+            tssbUndo.ImageTransparentColor = Color.Magenta;
+            tssbUndo.Name = "tssbUndo";
+            tssbUndo.Size = new Size(51, 48);
+            tssbUndo.Text = "Undo(Ctrl + Z)";
+            // 
+            // tssbRedo
+            // 
+            tssbRedo.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tssbRedo.Image = Properties.Resources.Redo;
+            tssbRedo.ImageTransparentColor = Color.Magenta;
+            tssbRedo.Name = "tssbRedo";
+            tssbRedo.Size = new Size(51, 48);
+            tssbRedo.Text = "toolStripSplitButton2";
             // 
             // menuStrip1
             // 
@@ -244,6 +290,61 @@
             toolStripTextBox1.Name = "toolStripTextBox1";
             toolStripTextBox1.Size = new Size(129, 40);
             // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 54);
+            // 
+            // toolStripComboBox1
+            // 
+            toolStripComboBox1.Name = "toolStripComboBox1";
+            toolStripComboBox1.Size = new Size(121, 54);
+            // 
+            // tsbFindInFiles
+            // 
+            tsbFindInFiles.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbFindInFiles.Image = Properties.Resources.FindInFile;
+            tsbFindInFiles.ImageTransparentColor = Color.Magenta;
+            tsbFindInFiles.Name = "tsbFindInFiles";
+            tsbFindInFiles.Size = new Size(46, 48);
+            tsbFindInFiles.Text = "toolStripButton1";
+            // 
+            // splitContainer1
+            // 
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Location = new Point(0, 0);
+            splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            splitContainer1.Panel1.Controls.Add(splitContainer2);
+            // 
+            // splitContainer1.Panel2
+            // 
+            splitContainer1.Panel2.Controls.Add(splitContainer3);
+            splitContainer1.Size = new Size(1618, 932);
+            splitContainer1.SplitterDistance = 315;
+            splitContainer1.TabIndex = 0;
+            // 
+            // splitContainer2
+            // 
+            splitContainer2.Dock = DockStyle.Fill;
+            splitContainer2.Location = new Point(0, 0);
+            splitContainer2.Name = "splitContainer2";
+            splitContainer2.Orientation = Orientation.Horizontal;
+            splitContainer2.Size = new Size(315, 932);
+            splitContainer2.SplitterDistance = 422;
+            splitContainer2.TabIndex = 0;
+            // 
+            // splitContainer3
+            // 
+            splitContainer3.Dock = DockStyle.Fill;
+            splitContainer3.Location = new Point(0, 0);
+            splitContainer3.Name = "splitContainer3";
+            splitContainer3.Size = new Size(1299, 932);
+            splitContainer3.SplitterDistance = 993;
+            splitContainer3.TabIndex = 0;
+            // 
             // mainWindow
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -258,12 +359,21 @@
             Text = "VisualSolution";
             formSplitContainer.Panel1.ResumeLayout(false);
             formSplitContainer.Panel1.PerformLayout();
+            formSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)formSplitContainer).EndInit();
             formSplitContainer.ResumeLayout(false);
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer2).EndInit();
+            splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer3).EndInit();
+            splitContainer3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -293,5 +403,14 @@
         private ToolStripButton tsbOpenFolder;
         private ToolStripButton tsbSave;
         private ToolStripButton tsbSaveAll;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripSplitButton tssbUndo;
+        private ToolStripSplitButton tssbRedo;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripComboBox toolStripComboBox1;
+        private ToolStripButton tsbFindInFiles;
+        private SplitContainer splitContainer1;
+        private SplitContainer splitContainer2;
+        private SplitContainer splitContainer3;
     }
 }
