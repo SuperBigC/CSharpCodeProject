@@ -5,6 +5,6 @@
 *.sln.docstates
 
 # Visual Studio 2022 cache/options directory
-.vs/
-WinFormVisualSolution/bin/
-WinFormVisualSolution/obj/
+CSharpDotNetFrame/.vs/
+CSharpDotNetFrame/WinFormVisualSolution/bin/
+CSharpDotNetFrame/WinFormVisualSolution/obj/
