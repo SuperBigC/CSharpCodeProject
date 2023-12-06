@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinFormVisualSolution
 {
-    internal class UserConfigInfo
+    public class UserConfigInfo
     {
         public string UserConfigName {  get; set; }
         public string UserPassward {  get; set; }

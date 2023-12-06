@@ -401,13 +401,16 @@
             // 
             // pbMainPic
             // 
-            pbMainPic.Dock = DockStyle.Fill;
             pbMainPic.Location = new Point(0, 0);
             pbMainPic.Margin = new Padding(4);
             pbMainPic.Name = "pbMainPic";
             pbMainPic.Size = new Size(991, 931);
+            pbMainPic.SizeMode = PictureBoxSizeMode.Zoom;
             pbMainPic.TabIndex = 0;
             pbMainPic.TabStop = false;
+            pbMainPic.MouseDown += pbMainPic_MouseDown;
+            pbMainPic.MouseMove += pbMainPic_MouseMove;
+            pbMainPic.MouseUp += pbMainPic_MouseUp;
             // 
             // lsViewPic
             // 
@@ -430,6 +433,7 @@
             // 
             // mainWindow
             // 
+            AllowDrop = true;
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1618, 1037);
@@ -440,6 +444,8 @@
             Margin = new Padding(4);
             Name = "mainWindow";
             Text = "VisualSolution";
+            DragDrop += mainWindow_DragDrop;
+            DragEnter += mainWindow_DragEnter;
             formSplitContainer.Panel1.ResumeLayout(false);
             formSplitContainer.Panel1.PerformLayout();
             formSplitContainer.Panel2.ResumeLayout(false);

@@ -13,15 +13,10 @@ namespace WinFormVisualSolution
             ApplicationConfiguration.Initialize();
 
             LogInWinForm logInWinForm = new LogInWinForm();
-            logInWinForm.LoadUserInfos();
             if (logInWinForm.ShowDialog() != DialogResult.OK)
             {
                 logInWinForm.Close();
                 return;
-            }
-            else
-            {
-                logInWinForm.SaveUserInfos();
             }
 
             Application.Run(new mainWindow());
