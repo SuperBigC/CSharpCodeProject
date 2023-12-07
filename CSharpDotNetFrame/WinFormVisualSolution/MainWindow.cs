@@ -41,6 +41,7 @@ namespace WinFormVisualSolution
             {
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
                 this.pbMainPic.Image = Image.FromFile(files[0]);
+                originalSize = this.pbMainPic.Size;
             }
 
         }
@@ -64,24 +65,25 @@ namespace WinFormVisualSolution
                 pbMainPic.Left += e.X - mouseX;
                 pbMainPic.Top += e.Y - mouseY;
             }
+            this.toolStripTextBox2.Text = e.X.ToString() + "--" + e.Y.ToString();
         }
 
         private void pbMainPic_MouseWheel(object sender, MouseEventArgs e)
         {
+            if (scale < 0.1 || scale > 5) return;
+            double tempScale = 0.1;
             if (e.Delta > 0)
             {
-                scale += 0.1;
-                if (scale > 5) scale = 5;
+                tempScale = 0.1;
             }
             else
             {
-                scale -= 0.1;
-                if (scale < 0.1) scale = 0.1;
+                tempScale = -0.1;
             }
-            pbMainPic.Width = (int)(originalSize.Width * scale);
-            pbMainPic.Height = (int)(originalSize.Height * scale);
-            pbMainPic.Left -= (int)(e.X * 0.1);
-            pbMainPic.Top -= (int)(e.Y * 0.1);
+            pbMainPic.Left -= (int)(e.X * tempScale);
+            pbMainPic.Top -= (int)(e.Y * tempScale);
+            pbMainPic.Width = (int)(pbMainPic.Width * (1 + tempScale));
+            pbMainPic.Height = (int)(pbMainPic.Height * (1 + tempScale));
         }
     }
 }

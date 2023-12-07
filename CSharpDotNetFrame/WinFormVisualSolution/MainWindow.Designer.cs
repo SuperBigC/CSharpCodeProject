@@ -401,10 +401,10 @@
             // 
             // pbMainPic
             // 
-            pbMainPic.Location = new Point(0, 0);
+            pbMainPic.Location = new Point(204, 148);
             pbMainPic.Margin = new Padding(4);
             pbMainPic.Name = "pbMainPic";
-            pbMainPic.Size = new Size(991, 931);
+            pbMainPic.Size = new Size(587, 475);
             pbMainPic.SizeMode = PictureBoxSizeMode.Zoom;
             pbMainPic.TabIndex = 0;
             pbMainPic.TabStop = false;
