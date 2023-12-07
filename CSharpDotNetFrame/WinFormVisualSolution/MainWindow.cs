@@ -68,7 +68,7 @@ namespace WinFormVisualSolution
             this.toolStripTextBox2.Text = e.X.ToString() + "--" + e.Y.ToString();
         }
 
-        private void pbMainPic_MouseWheel(object sender, MouseEventArgs e)
+        private void pbMainPic_MouseWheel(object? sender, MouseEventArgs e)
         {
             if (scale < 0.1 || scale > 5) return;
             double tempScale = 0.1;
